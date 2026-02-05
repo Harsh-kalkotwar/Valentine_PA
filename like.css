@@ -1,0 +1,134 @@
+/* ===== Page Base ===== */
+.likes-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff1f4, #f6edff);
+  padding: 60px 20px 80px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+.likes-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #5a2a3c;
+  margin-bottom: 6px;
+}
+.likes-grid {
+  position: relative;
+  z-index: 2;
+}
+
+.likes-header p {
+  font-size: 14px;
+  color: #b08998;
+  margin-bottom: 50px;
+}
+.like-card {
+  background: rgba(225, 122, 122, 0.85);
+  padding: 28px 22px;
+  border-radius: 22px;
+
+  font-size: 18px;
+  color: #5a2a3c;
+  line-height: 1.6;
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.like-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 900px) {
+  .likes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .likes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .likes-header h1 {
+    font-size: 34px;
+  }
+}
+/* ===== Floating Hearts Background ===== */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Base heart style */
+.floating-hearts span {
+  position: absolute;
+  font-size: 18px;
+  color: rgba(255, 120, 160, 0.55);
+  filter: blur(0.4px);
+  animation: floatHeart 20s ease-in-out infinite;
+}
+
+/* Gentle floating motion */
+@keyframes floatHeart {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(10px, -20px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+}
+
+/* Balanced distribution */
+.floating-hearts span:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-duration: 18s;
+}
+
+.floating-hearts span:nth-child(2) {
+  left: 25%;
+  top: 50%;
+  font-size: 14px;
+  animation-duration: 22s;
+}
+
+.floating-hearts span:nth-child(3) {
+  left: 45%;
+  top: 70%;
+  font-size: 20px;
+  animation-duration: 20s;
+}
+
+.floating-hearts span:nth-child(4) {
+  left: 65%;
+  top: 35%;
+  font-size: 16px;
+  animation-duration: 24s;
+}
+
+.floating-hearts span:nth-child(5) {
+  left: 80%;
+  top: 60%;
+  font-size: 22px;
+  animation-duration: 19s;
+}
+
+.floating-hearts span:nth-child(6) {
+  left: 5%;
+  top: 80%;
+  font-size: 18px;
+  animation-duration: 26s;
+}
+

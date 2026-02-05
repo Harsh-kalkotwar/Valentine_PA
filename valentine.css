@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffccd5, #ffe6eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Main container */
+.valentine-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 60px 50px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(255, 105, 135, 0.35);
+  z-index: 2;
+}
+
+.valentine-container h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 42px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+#cute-msg {
+  font-size: 16px;
+  color: #6a2a3a;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+  font-weight: 600;
+}
+
+#noBtn {
+  background: #ffd6e0;
+  color: #6a2a3a;
+  position: relative;
+}
+
+/* Floating hearts */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-hearts span {
+  position: absolute;
+  font-size: 20px;
+  animation: float 10s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-120vh);
+  }
+}
+
+/* Random heart positions */
+.floating-hearts span:nth-child(1) { left: 10%; animation-duration: 12s; }
+.floating-hearts span:nth-child(2) { left: 25%; animation-duration: 9s; }
+.floating-hearts span:nth-child(3) { left: 45%; animation-duration: 11s; }
+.floating-hearts span:nth-child(4) { left: 65%; animation-duration: 10s; }
+.floating-hearts span:nth-child(5) { left: 80%; animation-duration: 13s; }
+.floating-hearts span:nth-child(6) { left: 5%; animation-duration: 8s; }
+.floating-hearts span:nth-child(7) { left: 55%; animation-duration: 14s; }
+.floating-hearts span:nth-child(8) { left: 35%; animation-duration: 9s; }

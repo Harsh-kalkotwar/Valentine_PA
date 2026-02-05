@@ -1,0 +1,30 @@
+.future-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf6ee, #f3e9f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.future-wrapper {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.future-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #5a2a3c;
+  letter-spacing: 0.5px;
+}
+.future-text {
+  opacity: 0;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

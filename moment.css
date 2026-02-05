@@ -1,0 +1,186 @@
+/* ===== Page Base ===== */
+.moments-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff1f4, #f1e6ff);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* ⬅ vertical centering FIX */
+
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===== Title ===== */
+.moments-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #5a2a3c;
+  margin-bottom: 6px;
+}
+
+.moments-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #b08998;
+  margin-bottom: 28px;
+}
+
+/* ===== Main Wrapper ===== */
+.moments-wrapper {
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  margin: 0 auto;
+}
+
+/* ===== Video Container (KEY FIX) ===== */
+.video-container {
+  width: min(360px, 90vw);   /* ⬅ zoom + mobile safe */
+  aspect-ratio: 9 / 16;     /* ⬅ portrait ratio */
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Video ===== */
+.moment-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;        /* fills container cleanly */
+  border-radius: 26px;
+
+  background: #000;
+  display: none;
+
+  border: 6px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.moment-video.active {
+  display: block;
+}
+
+/* ===== Controls ===== */
+/* ===== Cute Side Navigation Buttons ===== */
+.side-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+
+  font-size: 18px;
+  color: #5a2a3c;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hover effect */
+.side-btn:hover {
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+}
+
+/* GAP FROM VIDEO */
+.side-btn.prev {
+  left: -70px;   /* ⬅ more breathing space */
+}
+
+.side-btn.next {
+  right: -70px;  /* ⬅ more breathing space */
+}
+@media (max-width: 600px) {
+  .side-btn.prev {
+    left: 10px;
+  }
+
+  .side-btn.next {
+    right: 10px;
+  }
+}
+.side-btn::after {
+  content: "♡";
+  font-size: 10px;
+  position: absolute;
+  bottom: 4px;
+  color: rgba(255, 120, 160, 0.6);
+}
+.side-btn::after {
+  content: "♡";
+  font-size: 10px;
+  position: absolute;
+  bottom: 4px;
+  color: rgba(255, 120, 160, 0.6);
+}
+
+
+/* ===== Decorative Background ===== */
+.moments-bg {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.moments-bg span {
+  position: absolute;
+  font-size: 160px;
+  color: rgba(255, 180, 200, 0.25);
+  user-select: none;
+}
+
+/* balanced placement */
+.moments-bg span:nth-child(1) {
+  top: 15%;
+  left: 10%;
+}
+
+.moments-bg span:nth-child(2) {
+  bottom: 20%;
+  right: 10%;
+}
+
+.moments-bg span:nth-child(3) {
+  top: 50%;
+  left: 35%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .moments-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .moments-bg {
+    display: none;   /* cleaner on small screens */
+  }
+
+  .video-controls {
+    bottom: -60px;
+  }
+}

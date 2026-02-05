@@ -1,0 +1,62 @@
+/* ===== Page Base ===== */
+.letter-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7ef, #f8eef6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Back button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #5a2a3c;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Letter container */
+.letter-wrapper {
+  max-width: 720px;
+  width: 100%;
+
+  background: #fffdf8;
+  padding: 50px 45px;
+  border-radius: 20px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* Letter text */
+.letter-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  line-height: 1.9;
+  color: #5a2a3c;
+
+  white-space: pre-wrap;   /* keeps spacing but wraps lines */
+  word-wrap: break-word;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .letter-wrapper {
+    padding: 35px 28px;
+  }
+
+  .letter-text {
+    font-size: 20px;
+  }
+}
