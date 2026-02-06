@@ -2,11 +2,6 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const msg = document.getElementById("cute-msg");
 
-const card = document.getElementById("card");
-const title = document.getElementById("title");
-const message = document.getElementById("message");
-const buttons = document.getElementById("buttons");
-
 const messages = [
   "Hey… don’t you like me? 🥺",
   "Are you sureeee? 💔",
@@ -21,8 +16,8 @@ let msgIndex = 0;
 
 // NO button runs away
 noBtn.addEventListener("mouseenter", () => {
-  const x = Math.random() * (window.innerWidth - 120);
-  const y = Math.random() * (window.innerHeight - 80);
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
 
   noBtn.style.position = "fixed";
   noBtn.style.left = `${x}px`;
@@ -37,19 +32,25 @@ noBtn.addEventListener("mouseenter", () => {
   yesBtn.style.transform = `scale(${yesScale})`;
 });
 
-// YES button wins 🎉
+// YES button wins
 yesBtn.addEventListener("click", () => {
-  title.textContent = "YAYYYY!!! 💖";
-
-  message.innerHTML = `
-    ✨ <strong>Mission Valentine</strong> ✨<br><br>
-    👗 Step 1: Get ready<br>
-    💘 Step 2: I’m taking you out on a cute date<br>
-    🍰📸 Step 3: Food + photos + us = perfect day
+  document.body.innerHTML = `
+    <div style="
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:linear-gradient(135deg,#ffccd5,#ffe6eb);
+      font-family:'Satisfy',cursive;
+      color:#d6336c;
+      font-size:42px;
+      text-align:left;
+    ">
+      YAYYY!!! 💖💖💖<br>
+      So now Mission Valentine:<br>
+Step 1: Get ready ✨<br>
+Step 2: I’m taking you out on a cute date 💖<br>
+Step 3: Food + photos + us = perfect day
+    </div>
   `;
-
-  buttons.style.display = "none";
-  msg.style.display = "none";
-
-  card.classList.add("yes-state");
 });
