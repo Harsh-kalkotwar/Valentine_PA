@@ -226,7 +226,7 @@
 .albums-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* ⬅ 2 columns */
-  gap: 40px;
+  gap: 25px;
 
   max-width: 900px;
   margin: 0 auto;
