@@ -645,25 +645,28 @@ html, body {
   }
 }
 .six-photos {
-  width: 92vw;
-  height: 70vh;              /* fits landscape phones */
+  width: 40vw;        /* smaller than before */
+  height: 40vh;       /* reduced height */
+  margin: 0 auto;     /* centered */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
+  gap: 4px;
 }
 
-/* Photos */
+/* Images */
 .six-photos img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;          /* no distortion */
-  border-radius: 14px;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
+
 @media (orientation: landscape) and (max-height: 500px) {
   .six-photos {
-    height: 65vh;
-    gap: 8px;
+    height: 20vh;
+    gap: 6px;
   }
 }
 .six-photos img {
